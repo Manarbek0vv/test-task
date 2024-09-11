@@ -1,0 +1,47 @@
+@keyframes visibleContainer {
+    0% {
+        opacity: 0;
+        transform: translateY(800px) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px)  scale(1);
+    }
+}
+
+@keyframes visibleWrapper {
+    0% {
+        backdrop-filter: blur(0px);
+    }
+
+    100% {
+        backdrop-filter: blur(5px);
+    }
+}
+
+.wrapper {
+    animation: visibleWrapper 200ms ease-out 0ms 1 forwards;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 500;
+    overflow: hidden;
+}
+
+.container {
+    animation: visibleContainer 200ms ease-out 0ms 1 forwards;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

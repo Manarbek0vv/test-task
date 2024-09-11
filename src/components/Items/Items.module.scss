@@ -1,0 +1,32 @@
+.wrapper {
+    position: relative;
+}
+
+.container {
+    position: relative;
+    border: 2px solid grey;
+    border-top: none;
+    border-bottom: none;
+    overflow: hidden;
+    height: 100px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+
+}
+
+.items {
+    position: relative;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    left: 0px;
+    transition: 4s cubic-bezier(0, 0.32, 0.05, 1);
+}
+
+.item {
+    width: 75px;
+    height: 75px;
+    border-radius: 15%;
+}
